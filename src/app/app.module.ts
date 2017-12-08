@@ -13,15 +13,24 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 /// DELETE firebaseConfig
 /// Add your own firebase config to environment.ts
 /// Then use it to initialize angularfire2 AngularFireModule.initializeApp(environment.firebaseConfig),
-import { firebaseConfig } from '../env'; 
+import { firebaseConfig } from '../env';
+import { SuperSecretComponent } from './super-secret/super-secret.component';
+import { UserLoginComponent } from './user-login/user-login.component'; 
+
+import { CoreModule } from './core/core.module';
+import { SubscriberPageComponent } from './subscriber-page/subscriber-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SuperSecretComponent,
+    UserLoginComponent,
+    SubscriberPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule

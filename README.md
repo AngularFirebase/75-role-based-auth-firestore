@@ -1,6 +1,6 @@
-# Episode XY
+# Episode 76 - Role-Based Access Control Firestore
 
-Watch the [screencast]()
+Watch the [screencast](https://angularfirebase.com/lessons/role-based-authorization-with-firestore-nosql-and-angular-5)
 
 ## Usage
 

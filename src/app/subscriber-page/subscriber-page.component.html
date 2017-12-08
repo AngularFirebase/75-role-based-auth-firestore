@@ -1,0 +1,19 @@
+<div *ngIf="post$ | async as post">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.content }}</p>
+
+    <button class="button is-danger" 
+            (click)="deletePost()"
+            *ngIf="auth.canDelete(user)">
+
+    Delete Post
+  </button>
+
+  <button class="button is-warning" 
+          (click)="editPost()"
+          *ngIf="auth.canEdit(user)">
+  
+    Edit Post
+  </button>
+
+</div>
